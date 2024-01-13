@@ -30,3 +30,5 @@ vim.keymap.set("n", "<leader>s", [[:%s/\<<C-r><C-w>\>/<C-r><C-w>/gI<Left><Left><
 
 vim.keymap.set("n", "<leader>vpp", "<cmd>e ~/.config/nvim/lua/szaboopeeter/packer.lua<CR>")
 vim.keymap.set("n", "<leader>vps", "<cmd>PackerSync<CR>")
+
+vim.keymap.set("n", "<leader>sb", "<cmd>Telescope buffers<CR>") -- show buffers

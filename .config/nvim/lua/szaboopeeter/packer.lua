@@ -9,7 +9,6 @@ return require('packer').startup(function(use)
         -- or                            , branch = '0.1.x',
         requires = { { 'nvim-lua/plenary.nvim' } }
     }
-    use { 'nvim-telescope/telescope-fzf-native.nvim', run = 'cmake -S. -Bbuild -DCMAKE_BUILD_TYPE=Release && cmake --build build --config Release && cmake --install build --prefix build' }
 
     use({
         'rose-pine/neovim',
@@ -32,7 +31,10 @@ return require('packer').startup(function(use)
     use("tpope/vim-fugitive")
 
     use("preservim/nerdtree")
-
+    use {
+        'nvim-lualine/lualine.nvim',
+        requires = { 'nvim-tree/nvim-web-devicons', opt = true }
+    }
     use {
         'VonHeikemen/lsp-zero.nvim',
         branch = 'v1.x',
@@ -63,4 +65,5 @@ return require('packer').startup(function(use)
     use('theHamsta/nvim-dap-virtual-text')
 
     use('simrat39/rust-tools.nvim')
+    use('numToStr/prettierrc.nvim')
 end)
